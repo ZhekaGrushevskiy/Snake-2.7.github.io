@@ -1,0 +1,11 @@
+<!-- left -->
+
+<svg width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <circle stroke="black" id="svg_1" r="10" cx="13" cy="13" stroke-width="1.5" fill="transparent" />
+  <circle stroke="black" id="svg_1" r="7" cx="13" cy="13" stroke-width="1.5" fill="black" />
+  <circle stroke="black" id="svg_1" r="2" cx="8" cy="18" stroke-width="1" fill="red" />
+  <circle stroke="black" id="svg_1" r="2" cx="8" cy="8" stroke-width="1" fill="red" />
+ </g>
+</svg>

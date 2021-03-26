@@ -1,0 +1,82 @@
+#tableRec{
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    top: -1000px;
+      left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    z-index: 20;
+}
+#tableRec.done{
+    opacity: 1;
+    visibility: visible;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 20;
+    
+}
+
+#innertableRec{
+    width: 70%;
+    background-color: lightgrey;
+    border-radius: 25px;
+    opacity: 1;
+    margin:0 auto;
+    position: relative;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+}
+#closeTableRec{
+    position: absolute;
+    right: 16%;
+    top: 17px;
+    z-index: 40;
+}
+#closeTableRec:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#records{
+    width: 100%;
+    padding-top: 50px;
+
+}
+
+
+
+
+::-webkit-scrollbar-button {
+background-image:url('');
+background-repeat:no-repeat;
+width:6px;
+height:10%;
+}
+
+::-webkit-scrollbar-track {
+background-color:transparent;
+box-shadow:0px 0px 3px transparent inset;
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 5px;
+border-radius: 5px;
+background-color:#204e12;
+box-shadow:0px 1px 1px #fff inset;
+}
+
+::-webkit-resizer{
+background-image:url('');
+background-repeat:no-repeat;
+width:7px;
+height:0px
+}
+
+::-webkit-scrollbar{
+width: 10px;
+}

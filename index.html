@@ -1,0 +1,200 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=0">
+    <title>Snake</title>
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tableRec.css">
+    <link rel="stylesheet" href="css/gamepade.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="size-page">
+        <div id="full">
+            <img width="20px" src="image/fullscreen.svg" alt="">
+        </div>
+        <div id="exit-full">
+            <img width="20px" src="image/exit-fullscreen.svg" alt="">
+        </div>
+    </div>
+    <div id="boxPause">
+        <div id="text-pause">pause</div>
+        <div id="home-play">
+            <div id="home">
+                <img width="50px" src="image/house.svg" alt="">
+            </div>
+            <div id="button-pause-restart">
+                <img width="50px" src="image/snakeLoader.svg" alt="">
+            </div>
+            <div id="play">
+                <img width="50px" src="image/play-button.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="pauseLand">
+        <img class="sizeBut" src="image/pause.svg" alt="">
+    </div>
+    <div id="gamepade">
+        <div id="checkGP">
+            <input id="checkInput" type="checkbox">
+            <span id="span">Use<br>GamePad</span>
+        </div>
+        <div id="pause">
+            <img width="50px" src="image/pause.svg" alt="">
+        </div>
+        <table id="butTable">
+            <tr>
+                <th></th>
+                <th id="up">
+                    <img class="sizeBut" src="image/up.png">
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <th id="left">
+                    <img class="sizeBut" src="image/left.png">
+                </th>
+                <th>
+                </th>
+                <th id="right">
+                    <img class="sizeBut" src="image/right.png">
+                </th>
+            </tr>
+            <tr>
+                <th></th>
+                <th id="down">
+                    <img class="sizeBut" src="image/down.png">
+                </th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="loader">
+        <div>
+            <div id="logoGame">
+                Snake<br>
+                Game
+            </div>
+            <div style="position: relative;">
+                <div id="boxPreload">
+                    <img src="image/snakeLoader.svg" alt="">
+                </div>
+                <div id="buttons-rec-aud">
+                    <div id="button-record">
+                        <img width="50px" src="image/tournament.svg" alt="">
+                    </div>
+                    <div id="button-food">
+                        <img id="fast-food" width="50px" src="image/fast-food.svg" alt="">
+                        <img id="vegan-food" width="50px" src="image/diet.svg" alt="">
+                    </div>
+                    <div id="button-audio">
+                        <img id="audio-on" width="50px" src="image/speaker.svg" alt="">
+                        <img id="audio-off" width="50px" src="image/mute.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="cntue">
+                <div>Play</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tableRec">
+        <div id="closeTableRec">
+            <img width="30px" src="image/cancel.png" alt="">
+        </div>
+        <div id='innertableRec'>
+
+            <div id="records">
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute;
+    opacity: 0; left: -9999999px;">
+        <img src="image/snakeHead.svg" alt="">
+        <img src="image/snakeTail.svg" alt="">
+        <img src="image/smallerTail.svg" alt="">
+        <img src="image/smallTail.svg" alt="">
+        <img src="image/heart.png" alt="">
+        <img src="image/emptyheart.png" alt="">
+        <img src="image/redheart.svg" alt="">
+        <img src="image/snakeHeadLeft.svg" alt="">
+        <img src="image/snakeHead.svg" alt="">
+        <img src="image/snakeHeadRight.svg" alt="">
+        <img src="image/snakeHeadDown.svg" alt="">
+        <img src="image/rat-right.png" alt="">
+        <img src="image/rat-left.png" alt="">
+        <img src="image/rat-up.png" alt="">
+        <img src="image/rat-down.png" alt="">
+        <img src="image/french-fries.png" alt="">
+        <img src="image/fried-chicken.png" alt="">
+        <img src="image/hot-dog.png" alt="">
+        <img src="image/kebab.png" alt="">
+        <img src="image/nuggets.png" alt="">
+        <img src="image/pizza.png" alt="">
+        <img src="image/potato.png" alt="">
+        <img src="image/strawberry.png" alt="">
+        <img src="image/tomato.png" alt="">
+        <img src="image/turkey.png" alt="">
+        <img src="image/water-bottle.png" alt="">
+        <img src="image/apple.png" alt="">
+        <img src="image/bananas.png" alt="">
+        <img src="image/bigPizza.png" alt="">
+        <img src="image/broccoli.png" alt="">
+        <img src="image/burger.png" alt="">
+        <img src="image/carrot.png" alt="">
+        <img src="image/cucumber.png" alt="">
+        <img src="image/.png" alt="">
+    </div>
+    <div id="box">
+        <div id="img-swipe">
+            <img width="100px" src="image/swipe-left.svg" alt="">
+        </div>
+        <div id="box-content">
+            <canvas id="canvas1" style="width: 100%;"></canvas>
+        </div>
+        <div id='press-swipe'>
+            press or swipe..
+        </div>
+        <div id="game-over">
+            <div id='inner-game-over'>
+
+                <div id="button-exit">
+                    <img width="30px" src="image/cancel.png" alt="">
+                </div>
+
+                <div id="input-nik">
+                    <input id="field-nik" type="text" placeholder="your name..">
+                    <div id="button-save">
+                        <img width="40px" src="image/save-file.svg" alt="">
+                    </div>
+                    <div id="logoGameOver">
+                        Game<br>
+                        Over
+                    </div>
+                    <div id="box-buttons">
+                        <div id="button-restart">
+                            <img width="40px" src="image/snakeLoader.svg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/tableRec.js"></script>
+    <script src="js/gamepade.js"></script>
+</body>
+
+</html>

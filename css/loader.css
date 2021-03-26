@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+  @font-face {
+	font-family: 'Conv_Oi-Regular';
+	src: url('../fonts/Oi-Regular.eot');
+	src: local('☺'), 
+    url('../fonts/Oi-Regular.woff') format('woff'), 
+    url('../fonts/Oi-Regular.ttf') format('truetype'), 
+    url('../fonts/Oi-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style:normal;
+}
+
+body{
+    margin: 0;
+}
+#full,#exit-full{
+    position: fixed;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    z-index: 30;
+}
+#full:hover,#exit-full:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+#exit-full{
+    display: none;
+}
+#exit-full.done{
+    display: block;
+}
+#full.done{
+    display: none;
+}
+
+#loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+    radial-gradient(circle at 100% 150%, rgb(121, 182, 121) 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0 150%, rgb(121, 182, 121) 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50% 100%, rgb(88, 117, 88) 71%, transparent 71%,   transparent),
+    radial-gradient(circle at 100% 50%, rgb(121, 182, 121) 49%, transparent 50%,  transparent),
+    radial-gradient(circle at 0 50%, rgb(121, 182, 121) 49%, transparent 50%, transparent);
+    background-repeat: repeat;
+    background-size: 50px 25px;
+    z-index: 18;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#boxPreload.done{
+    opacity: 0;
+    visibility: hidden;
+}
+#boxPreload.not{
+    display: none;
+}
+#buttons-rec-aud{
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    align-items: center;
+    transition: 1s all ease-in-out 0.3s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+}
+#buttons-rec-aud.done{
+    opacity: 1;
+}
+   #button-record,#button-audio,#button-food{
+    margin: 10px auto;
+    text-align: center;
+   }
+   
+   #button-record:hover,#button-audio:hover,#button-food:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+    #audio-off{
+        display: none;
+    }
+    #audio-off.done{
+        display: block;
+    }
+    #audio-on.done{
+        display: none;
+    }
+    #vegan-food{
+        display: none;
+    }
+    #vegan-food.done{
+        display: block;
+    }
+    #fast-food.done{
+        display: none;
+    }
+
+#loader.done{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+    #logoGame{
+       font-family: 'Conv_Oi-Regular';
+       color: rgb(15, 97, 15);
+       font-size: 50px;
+       text-align: center;
+       letter-spacing: 5px;
+       text-shadow: 6px 2px 3px black;
+    }  
+    #boxPreload{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transition: 1s all;
+        opacity: 1;
+        visibility: visible; 
+        margin: auto;
+        animation: anim 2s infinite linear;
+    }
+        #boxPreload img{
+            width: 200px;
+            height: 200px;
+        }
+    @keyframes anim{
+       from{
+        transform: rotate(0deg);
+       }
+       to{
+        transform: rotate(360deg);
+       }
+            
+        
+    }
+
+
+    #cntue{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: 2s all;
+    }
+        #cntue div{
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+            background-color:rgb(15, 97, 15);
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Conv_Oi-Regular';
+            letter-spacing: 2px;
+        }
+        #cntue div:hover{
+            box-shadow: 2px 2px 10px black;
+            cursor: pointer;
+        }
+        #cntue.close{
+            opacity: 1;
+            visibility: visible;
+        }
+        #cntue.done{
+            display: none;
+        }
+
+        @media (max-width:800px){
+            #logoGame{
+                font-size: 30px;
+             }  
+             #boxPreload{
+                width: 100px;
+                height: 100px;
+            }
+                #boxPreload img{
+                    width: 100px;
+                    height: 100px;
+                }
+                #cntue div{
+                    width: 150px;
+                    height: 30px;
+                    font-size: 15px;
+                }
+            }
+            #press-swipe{
+                opacity: 1;
+                position: absolute;
+                width: 220px;
+                top:40%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                border: 2px solid black;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                padding: 5px;
+                border-radius: 20px;
+                background-image:
+                radial-gradient(circle at 100% 150%, rgb(121, 182, 121) 40%, transparent 40%, transparent),
+                radial-gradient(circle at 0 150%, rgb(121, 182, 121) 40%, transparent 40%, transparent),
+                radial-gradient(circle at 50% 100%, rgb(88, 117, 88) 71%, transparent 71%,   transparent),
+                radial-gradient(circle at 100% 50%, rgb(121, 182, 121) 49%, transparent 50%,  transparent),
+                radial-gradient(circle at 0 50%, rgb(121, 182, 121) 49%, transparent 50%, transparent);
+                background-repeat: repeat;
+                background-size: 20px 10px;
+                animation: animPS 2s linear infinite;
+                transition: opacity 1s ease-in-out;
+            }
+            #press-swipe.done{
+                opacity: 0;
+            }
+            @keyframes animPS {
+                from{
+                    box-shadow: 0 0 10px black;
+                }
+                50%{
+                    box-shadow: 0 0 0 black;
+                }
+                to{
+                    box-shadow: 0 0 10px black;
+                }
+            }
